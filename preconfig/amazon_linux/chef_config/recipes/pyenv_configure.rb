@@ -33,7 +33,7 @@ pyenv_script 'pip_install_oradock_dependencies' do
 end
 
 ## Install specific docker-py version
-pyenv_script 'pip_install_oradock_dependencies' do
+pyenv_script 'pip_install_oradock_dockerpy_spec_version' do
   pyenv_version         node['pyenv']['version']
   root_path             node['pyenv']['root_path']
   code                  'pip install ' + node['pyenv']['dockerpy'] + '==' + node['pyenv']['dockerpy-spec-ver']
